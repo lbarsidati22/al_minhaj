@@ -24,6 +24,9 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "about": MessageLookupByLibrary.simpleMessage("عن التطبيق"),
     "ahzab": MessageLookupByLibrary.simpleMessage("الاحزاب"),
+    "applicationOfWorship": MessageLookupByLibrary.simpleMessage(
+      "تطبيق العبادات",
+    ),
     "arabic": MessageLookupByLibrary.simpleMessage("العربيه"),
     "chaptername": MessageLookupByLibrary.simpleMessage("إسم السورة"),
     "chapternumber": MessageLookupByLibrary.simpleMessage("عدد الأيات"),
@@ -50,8 +53,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings": MessageLookupByLibrary.simpleMessage("الاعدادات"),
     "share": MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
     "sharetheapp": MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
+    "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
     "tafsir": MessageLookupByLibrary.simpleMessage("التفسير"),
     "tasbehnumber": MessageLookupByLibrary.simpleMessage("عدد التسبيحات"),
     "theme": MessageLookupByLibrary.simpleMessage("السمات"),
+    "welcomeMessage": MessageLookupByLibrary.simpleMessage(
+      "تعلم الدين الاسلامي عن طريق تصنيفات وملفات وشروحات ومحاضرات ٫٫الخ , يوفر أوقات الصلاة وخطب والقرآن الكريم كامل مع توفير تفسير وقراءة بالصوت ٫٫ اكتشف المزيد بنفسك",
+    ),
   };
 }

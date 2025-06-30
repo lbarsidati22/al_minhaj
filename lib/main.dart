@@ -1,9 +1,11 @@
+import 'package:al_minhaj/core/routes/app_routes.dart'
+    as AppRoutes;
 import 'package:al_minhaj/core/services/shared_pref.dart';
 import 'package:al_minhaj/core/settings/cubit/settings_cubit.dart';
 import 'package:al_minhaj/core/settings/cubit/settings_state.dart';
 import 'package:al_minhaj/core/utils/theme/app_theme.dart';
 import 'package:al_minhaj/core/utils/theme/font_family_helper.dart';
-import 'package:al_minhaj/features/home/presentation/views/home_view.dart';
+import 'package:al_minhaj/features/on_bording/views/on_bording_view.dart';
 import 'package:al_minhaj/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -55,7 +57,8 @@ class AlMinhag extends StatelessWidget {
             state.language,
           ),
           themeMode: state.themeMode,
-          home: HomeView(),
+          onGenerateRoute: AppRoutes.onGenerateRoute,
+          initialRoute: OnBordingView.routeName,
         );
       },
     );

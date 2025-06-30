@@ -74,6 +74,31 @@ class S {
     return Intl.message('Ahzab', name: 'ahzab', desc: '', args: []);
   }
 
+  /// `Application Of Worship`
+  String get applicationOfWorship {
+    return Intl.message(
+      'Application Of Worship',
+      name: 'applicationOfWorship',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Learn the Islamic religion through classifications, files, explanations, lectures, etc. It provides prayer times, sermons, and the entire Holy Quran, with interpretation and audio reading. Discover more for yourself.`
+  String get welcomeMessage {
+    return Intl.message(
+      'Learn the Islamic religion through classifications, files, explanations, lectures, etc. It provides prayer times, sermons, and the entire Holy Quran, with interpretation and audio reading. Discover more for yourself.',
+      name: 'welcomeMessage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Get Started`
+  String get startNow {
+    return Intl.message('Get Started', name: 'startNow', desc: '', args: []);
+  }
+
   /// `Tafsir`
   String get tafsir {
     return Intl.message('Tafsir', name: 'tafsir', desc: '', args: []);
