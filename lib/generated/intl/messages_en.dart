@@ -25,6 +25,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "about": MessageLookupByLibrary.simpleMessage("About App"),
     "ahadeth": MessageLookupByLibrary.simpleMessage("Ahadeth"),
     "ahzab": MessageLookupByLibrary.simpleMessage("Ahzab"),
+    "applicationOfWorship": MessageLookupByLibrary.simpleMessage(
+      "Application Of Worship",
+    ),
     "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
     "chaptername": MessageLookupByLibrary.simpleMessage("Surah Name"),
     "chapternumber": MessageLookupByLibrary.simpleMessage("Verses Number"),
@@ -52,9 +55,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "settings": MessageLookupByLibrary.simpleMessage("Settings"),
     "share": MessageLookupByLibrary.simpleMessage("Share App"),
     "sharetheapp": MessageLookupByLibrary.simpleMessage("Share the app"),
+    "startNow": MessageLookupByLibrary.simpleMessage("Get Started"),
     "sura_name": MessageLookupByLibrary.simpleMessage("Sura Name"),
     "tafsir": MessageLookupByLibrary.simpleMessage("Tafsir"),
     "tasbehnumber": MessageLookupByLibrary.simpleMessage("Tasbeh Number"),
     "theme": MessageLookupByLibrary.simpleMessage("Theme"),
+    "welcomeMessage": MessageLookupByLibrary.simpleMessage(
+      "Learn the Islamic religion through classifications, files, explanations, lectures, etc. It provides prayer times, sermons, and the entire Holy Quran, with interpretation and audio reading. Discover more for yourself.",
+    ),
   };
 }
