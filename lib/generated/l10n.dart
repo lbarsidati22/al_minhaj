@@ -134,9 +134,9 @@ class S {
     );
   }
 
-  /// ` Parts`
+  /// `Parts`
   String get parts {
-    return Intl.message(' Parts', name: 'parts', desc: '', args: []);
+    return Intl.message('Parts', name: 'parts', desc: '', args: []);
   }
 
   /// `Quran Kareem`

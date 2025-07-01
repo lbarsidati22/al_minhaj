@@ -43,6 +43,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "light": MessageLookupByLibrary.simpleMessage("نهاري"),
     "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
     "moreapps": MessageLookupByLibrary.simpleMessage("المزيد من التطبيقات"),
+    "parts": MessageLookupByLibrary.simpleMessage("الأجزاء"),
     "press": MessageLookupByLibrary.simpleMessage("اضغط هنا"),
     "privacy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
     "prostrations": MessageLookupByLibrary.simpleMessage("السجدات"),

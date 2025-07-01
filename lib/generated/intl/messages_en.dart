@@ -44,7 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "light": MessageLookupByLibrary.simpleMessage("Light"),
     "logout": MessageLookupByLibrary.simpleMessage("Logout"),
     "moreapps": MessageLookupByLibrary.simpleMessage("More Apps"),
-    "parts": MessageLookupByLibrary.simpleMessage(" Parts"),
+    "parts": MessageLookupByLibrary.simpleMessage("Parts"),
     "press": MessageLookupByLibrary.simpleMessage("Tap Here"),
     "privacy": MessageLookupByLibrary.simpleMessage("Privacy Policy"),
     "prostrations": MessageLookupByLibrary.simpleMessage("Prostrations"),
