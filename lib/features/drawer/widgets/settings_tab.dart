@@ -49,7 +49,7 @@ class SettingsTab extends StatelessWidget {
       },
       {
         'icon': const Icon(Iconsax.moon),
-        'label': 'تفعيل الوضع الليلي',
+        'label': S.of(context).darkNight,
         'hasSwitch': true,
       },
       {

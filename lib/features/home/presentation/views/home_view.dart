@@ -1,6 +1,6 @@
-import 'package:al_minhaj/core/utils/theme/app_font_styles.dart';
 import 'package:al_minhaj/core/widgets/build_app_bar.dart';
 import 'package:al_minhaj/features/drawer/pages/custom_drawer.dart';
+import 'package:al_minhaj/features/home/presentation/widgets/prayer_time_card.dart';
 import 'package:al_minhaj/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
@@ -16,11 +16,11 @@ class HomeView extends StatelessWidget {
         title: S.of(context).quran,
       ),
       drawer: CustomDrawer(),
-      body: Center(
-        child: Text(
-          S.of(context).language,
-          style: AppFontStyles.styleRegular16(context),
-        ),
+      body: CustomScrollView(
+        physics: const ClampingScrollPhysics(),
+        slivers: [
+          SliverToBoxAdapter(child: PrayerTimeCard()),
+        ],
       ),
     );
   }
