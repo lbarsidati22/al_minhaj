@@ -43,7 +43,7 @@ class AlMinhag extends StatelessWidget {
         );
 
         return MaterialApp(
-          title: 'AlMinhag for',
+          title: 'AlMinhag',
 
           localizationsDelegates: [
             S.delegate,

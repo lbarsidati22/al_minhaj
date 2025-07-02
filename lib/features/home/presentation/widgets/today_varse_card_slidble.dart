@@ -53,10 +53,10 @@ class _TodayVarseCardSlidbleState
           ),
         ),
         SizedBox(
-          height: 6.heightPercent(context),
+          height: 2.heightPercent(context),
         ),
         SizedBox(
-          height: 20.heightPercent(context),
+          height: 23.heightPercent(context),
           child: PageView.builder(
             reverse: true,
             onPageChanged: (value) {

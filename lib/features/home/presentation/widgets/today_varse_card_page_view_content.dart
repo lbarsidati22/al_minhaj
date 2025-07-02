@@ -1,5 +1,6 @@
 import 'package:al_minhaj/core/utils/theme/app_font_styles.dart';
 import 'package:al_minhaj/core/widgets/sized_box.dart';
+import 'package:al_minhaj/features/home/presentation/widgets/today_verse_card_audio.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -69,7 +70,7 @@ class TodayVarseCardPageViewContent
               ? Expanded(child: Content1())
               : index == 1
               ? Content2()
-              : Text('we will sett video here'),
+              : TodayVerseCardAudio(),
           SizedBox(
             height: 2.heightPercent(context),
           ),

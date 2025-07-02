@@ -99,6 +99,26 @@ class S {
     return Intl.message('Get Started', name: 'startNow', desc: '', args: []);
   }
 
+  /// `Reciter Sheikh Mishary Rashid Al-Afasy`
+  String get cheikhAudio {
+    return Intl.message(
+      'Reciter Sheikh Mishary Rashid Al-Afasy',
+      name: 'cheikhAudio',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Run the lecture`
+  String get runMohadra {
+    return Intl.message(
+      'Run the lecture',
+      name: 'runMohadra',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Tafsir`
   String get tafsir {
     return Intl.message('Tafsir', name: 'tafsir', desc: '', args: []);
@@ -109,9 +129,9 @@ class S {
     return Intl.message('Kneeling', name: 'kneeling', desc: '', args: []);
   }
 
-  /// `ayat Today`
+  /// `Ayat Today`
   String get ayatToday {
-    return Intl.message('ayat Today', name: 'ayatToday', desc: '', args: []);
+    return Intl.message('Ayat Today', name: 'ayatToday', desc: '', args: []);
   }
 
   /// `Surah Al-Fateha`

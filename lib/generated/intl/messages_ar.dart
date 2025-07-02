@@ -31,6 +31,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "ayatToday": MessageLookupByLibrary.simpleMessage("الآيات اليومية"),
     "chaptername": MessageLookupByLibrary.simpleMessage("إسم السورة"),
     "chapternumber": MessageLookupByLibrary.simpleMessage("عدد الأيات"),
+    "cheikhAudio": MessageLookupByLibrary.simpleMessage(
+      "القارئ الشيخ مشاري راشد العفاسي",
+    ),
     "contact": MessageLookupByLibrary.simpleMessage("اتصل بنا"),
     "dark": MessageLookupByLibrary.simpleMessage("ليلي"),
     "darkNight": MessageLookupByLibrary.simpleMessage("تفعيل وضع الليلي"),
@@ -52,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "quranradio": MessageLookupByLibrary.simpleMessage("إذاعة القرآن الكريم"),
     "radio": MessageLookupByLibrary.simpleMessage("الراديو"),
     "rate": MessageLookupByLibrary.simpleMessage("تقييم التطبيق"),
+    "runMohadra": MessageLookupByLibrary.simpleMessage("قم بتشغيل المحاضرة"),
     "settings": MessageLookupByLibrary.simpleMessage("الاعدادات"),
     "share": MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
     "sharetheapp": MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
