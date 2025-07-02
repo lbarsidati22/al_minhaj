@@ -109,6 +109,21 @@ class S {
     return Intl.message('Kneeling', name: 'kneeling', desc: '', args: []);
   }
 
+  /// `ayat Today`
+  String get ayatToday {
+    return Intl.message('ayat Today', name: 'ayatToday', desc: '', args: []);
+  }
+
+  /// `Surah Al-Fateha`
+  String get soraAlfateha {
+    return Intl.message(
+      'Surah Al-Fateha',
+      name: 'soraAlfateha',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Prostrations`
   String get prostrations {
     return Intl.message(

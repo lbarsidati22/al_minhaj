@@ -43,6 +43,7 @@ class OnBordingView extends StatelessWidget {
                       context,
                     ).copyWith(
                       fontWeight: FontWeight.w600,
+                      color: Colors.black,
                     ),
               ),
               SizedBox(
