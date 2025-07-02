@@ -33,14 +33,17 @@ class AlMinhag extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<SettingsCubit, SettingsState>(
+    return BlocBuilder<
+      SettingsCubit,
+      SettingsState
+    >(
       builder: (context, state) {
         print(
           "FONT: ${FontFamilyHelper.getFontFamily(state.language)}",
         );
 
         return MaterialApp(
-          title: 'AlMinhag',
+          title: 'AlMinhag for',
 
           localizationsDelegates: [
             S.delegate,
@@ -52,12 +55,15 @@ class AlMinhag extends StatelessWidget {
               S.delegate.supportedLocales,
           debugShowCheckedModeBanner: false,
           locale: Locale(state.language),
-          theme: AppTheme.lightTheme(state.language),
+          theme: AppTheme.lightTheme(
+            state.language,
+          ),
           darkTheme: AppTheme.darkTheme(
             state.language,
           ),
           themeMode: state.themeMode,
-          onGenerateRoute: AppRoutes.onGenerateRoute,
+          onGenerateRoute:
+              AppRoutes.onGenerateRoute,
           initialRoute: OnBordingView.routeName,
         );
       },
