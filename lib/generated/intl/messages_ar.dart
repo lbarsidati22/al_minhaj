@@ -22,13 +22,19 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "TheMostBeautifulNamesofAllah": MessageLookupByLibrary.simpleMessage(
+      " أسماء الله الحسني",
+    ),
     "about": MessageLookupByLibrary.simpleMessage("عن التطبيق"),
     "ahzab": MessageLookupByLibrary.simpleMessage("الاحزاب"),
+    "allCategories": MessageLookupByLibrary.simpleMessage("جميع التصنيفات"),
+    "allMedia": MessageLookupByLibrary.simpleMessage("كل الوسائط"),
     "applicationOfWorship": MessageLookupByLibrary.simpleMessage(
       "تطبيق العبادات",
     ),
     "arabic": MessageLookupByLibrary.simpleMessage("العربيه"),
     "ayatToday": MessageLookupByLibrary.simpleMessage("الآيات اليومية"),
+    "azkar": MessageLookupByLibrary.simpleMessage("الأذكار"),
     "chaptername": MessageLookupByLibrary.simpleMessage("إسم السورة"),
     "chapternumber": MessageLookupByLibrary.simpleMessage("عدد الأيات"),
     "cheikhAudio": MessageLookupByLibrary.simpleMessage(
@@ -37,6 +43,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "contact": MessageLookupByLibrary.simpleMessage("اتصل بنا"),
     "dark": MessageLookupByLibrary.simpleMessage("ليلي"),
     "darkNight": MessageLookupByLibrary.simpleMessage("تفعيل وضع الليلي"),
+    "electronicRosary": MessageLookupByLibrary.simpleMessage(
+      "السبحة الالكترونية",
+    ),
     "english": MessageLookupByLibrary.simpleMessage("الانجليزيه"),
     "favorite": MessageLookupByLibrary.simpleMessage("المفضله"),
     "hadethname": MessageLookupByLibrary.simpleMessage("الأحاديث"),
@@ -48,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
     "moreapps": MessageLookupByLibrary.simpleMessage("المزيد من التطبيقات"),
     "parts": MessageLookupByLibrary.simpleMessage("الأجزاء"),
+    "prayertimes": MessageLookupByLibrary.simpleMessage("اوقات الصلاة"),
     "press": MessageLookupByLibrary.simpleMessage("اضغط هنا"),
     "privacy": MessageLookupByLibrary.simpleMessage("سياسة الخصوصية"),
     "prostrations": MessageLookupByLibrary.simpleMessage("السجدات"),
@@ -61,6 +71,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "sharetheapp": MessageLookupByLibrary.simpleMessage("مشاركة التطبيق"),
     "soraAlfateha": MessageLookupByLibrary.simpleMessage("سورة الفاتحة"),
     "startNow": MessageLookupByLibrary.simpleMessage("ابدأ الان"),
+    "supplications": MessageLookupByLibrary.simpleMessage("الأدعية"),
     "tafsir": MessageLookupByLibrary.simpleMessage("التفسير"),
     "tasbehnumber": MessageLookupByLibrary.simpleMessage("عدد التسبيحات"),
     "theme": MessageLookupByLibrary.simpleMessage("السمات"),

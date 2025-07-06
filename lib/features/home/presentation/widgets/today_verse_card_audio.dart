@@ -116,7 +116,7 @@ class _TodayVerseCardAudioState
                 Text(
                   S.of(context).runMohadra,
                   style:
-                      AppFontStyles.styleBold16(
+                      AppFontStyles.styleBold13(
                         context,
                       ).copyWith(
                         color:
@@ -129,34 +129,33 @@ class _TodayVerseCardAudioState
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
                 ),
-                SizedBox(
-                  height: 0.6.heightPercent(
-                    context,
+
+                Expanded(
+                  child: Text(
+                    S.of(context).cheikhAudio,
+                    style:
+                        AppFontStyles.styleRegular13(
+                          context,
+                        ).copyWith(
+                          fontWeight:
+                              FontWeight.w500,
+                          color:
+                              AppTheme.isDark(
+                                context,
+                              )
+                              ? Colors.white
+                              : Colors.black,
+                        ),
+                    overflow:
+                        TextOverflow.ellipsis,
+                    maxLines: 1,
                   ),
-                ),
-                Text(
-                  S.of(context).cheikhAudio,
-                  style:
-                      AppFontStyles.styleRegular14(
-                        context,
-                      ).copyWith(
-                        fontWeight:
-                            FontWeight.w500,
-                        color:
-                            AppTheme.isDark(
-                              context,
-                            )
-                            ? Colors.white
-                            : Colors.black,
-                      ),
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
                 ),
               ],
             ),
           ),
           SizedBox(
-            width: 1.widthPercent(context),
+            width: 0.5.widthPercent(context),
           ),
           CircleAvatar(
             radius: 25,

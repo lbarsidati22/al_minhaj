@@ -1,6 +1,11 @@
 import 'package:al_minhaj/core/routes/base_routes.dart';
+import 'package:al_minhaj/features/all_ad3ye/presentation/views/al_ad3ya_screen.dart';
+import 'package:al_minhaj/features/azkar/presentation/views/azkar_screen.dart';
+import 'package:al_minhaj/features/hadith/presentation/views/ahadith_screen.dart';
 import 'package:al_minhaj/features/home/presentation/views/home_view.dart';
 import 'package:al_minhaj/features/on_bording/views/on_bording_view.dart';
+import 'package:al_minhaj/features/quran/presentation/views/quran_screen.dart';
+import 'package:al_minhaj/features/tesbih/presentation/views/tesbih_screen.dart';
 import 'package:flutter/material.dart';
 
 Route<dynamic> onGenerateRoute(
@@ -9,9 +14,19 @@ Route<dynamic> onGenerateRoute(
   // final args = settings.arguments;
   switch (settings.name) {
     case OnBordingView.routeName:
-      return BaseRoute(page: const OnBordingView());
+      return BaseRoute(page: OnBordingView());
     case HomeView.routeName:
       return BaseRoute(page: HomeView());
+    case AlAd3yaScreen.routeName:
+      return BaseRoute(page: AlAd3yaScreen());
+    case QuranScreen.routeName:
+      return BaseRoute(page: QuranScreen());
+    case AhadithScreen.routeName:
+      return BaseRoute(page: AhadithScreen());
+    case AzkarScreen.routeName:
+      return BaseRoute(page: AzkarScreen());
+    case TesbihScreen.routeName:
+      return BaseRoute(page: TesbihScreen());
     // case QuranDetails.routeName:
     //   final args =
     //       settings.arguments as Map<String, dynamic>;

@@ -124,6 +124,66 @@ class S {
     return Intl.message('Tafsir', name: 'tafsir', desc: '', args: []);
   }
 
+  /// `All Categories`
+  String get allCategories {
+    return Intl.message(
+      'All Categories',
+      name: 'allCategories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `All Media`
+  String get allMedia {
+    return Intl.message('All Media', name: 'allMedia', desc: '', args: []);
+  }
+
+  /// `Prayer Times`
+  String get prayertimes {
+    return Intl.message(
+      'Prayer Times',
+      name: 'prayertimes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Supplications`
+  String get supplications {
+    return Intl.message(
+      'Supplications',
+      name: 'supplications',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Electronic Rosary`
+  String get electronicRosary {
+    return Intl.message(
+      'Electronic Rosary',
+      name: 'electronicRosary',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The Most Beautiful Names of Allah`
+  String get TheMostBeautifulNamesofAllah {
+    return Intl.message(
+      'The Most Beautiful Names of Allah',
+      name: 'TheMostBeautifulNamesofAllah',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Azkar`
+  String get azkar {
+    return Intl.message('Azkar', name: 'azkar', desc: '', args: []);
+  }
+
   /// `Kneeling`
   String get kneeling {
     return Intl.message('Kneeling', name: 'kneeling', desc: '', args: []);

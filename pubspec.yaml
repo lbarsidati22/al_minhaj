@@ -100,6 +100,10 @@ flutter:
           weight: 400
         # - asset: fonts/TrajanPro_Bold.ttf
         #   weight: 700
+    - family: Digital
+      fonts:
+        - asset: assets/fonts/digital-7.ttf
+          weight: 400 # Regular weight
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package

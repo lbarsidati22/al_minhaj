@@ -5,23 +5,33 @@ import 'package:flutter/material.dart';
 class AppTheme {
   // static bool isDark = false;
 
-  static Color lightPrimaryColor = Color(0xFFB7935F);
-  static Color darkPrimaryColor = Color(0xFF141A2E);
+  static Color lightPrimaryColor = Color(
+    0xFFB7935F,
+  );
+  static Color darkPrimaryColor = Color(
+    0xFF141A2E,
+  );
   static Color darkSecondary = Color(0xFFFACC1D);
   static bool isDark(BuildContext context) {
     return Theme.of(context).brightness ==
         Brightness.dark;
   }
 
-  static ThemeData lightTheme(String languageCode) {
-    final fontFamily = FontFamilyHelper.getFontFamily(
-      languageCode,
-    );
+  static ThemeData lightTheme(
+    String languageCode,
+  ) {
+    final fontFamily =
+        FontFamilyHelper.getFontFamily(
+          languageCode,
+        );
 
     return ThemeData(
       colorScheme: ColorScheme.light(
-        primary: LightColors.instance.kPrimaryColor,
-        onPrimary: LightColors.instance.kPajeColor,
+        brightness: Brightness.light,
+        primary:
+            LightColors.instance.kPrimaryColor,
+        onPrimary:
+            LightColors.instance.kPajeColor,
         secondary:
             LightColors.instance.kSecondaryColor,
         error: Colors.red,
@@ -30,8 +40,10 @@ class AppTheme {
             LightColors.instance.kSecondaryColor,
         onPrimaryContainer:
             LightColors.instance.kPrimaryColor,
-        surface: LightColors.instance.kBackgroundColor,
-        onSurface: LightColors.instance.kBlackColor,
+        surface:
+            LightColors.instance.kBackgroundColor,
+        onSurface:
+            LightColors.instance.kBlackColor,
         onSecondaryContainer:
             LightColors.instance.kWhiteColor,
       ),
@@ -41,9 +53,13 @@ class AppTheme {
       ),
       textTheme: TextTheme(
         bodyLarge: TextStyle(color: Colors.black),
-        bodyMedium: TextStyle(color: Colors.black),
+        bodyMedium: TextStyle(
+          color: Colors.black,
+        ),
         bodySmall: TextStyle(color: Colors.black),
-        headlineSmall: TextStyle(color: Colors.black),
+        headlineSmall: TextStyle(
+          color: Colors.black,
+        ),
       ),
       scaffoldBackgroundColor:
           LightColors.instance.kBackgroundColor,
@@ -56,7 +72,9 @@ class AppTheme {
         foregroundColor:
             LightColors.instance.kPrimaryColor,
 
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: IconThemeData(
+          color: Colors.black,
+        ),
         titleTextStyle: TextStyle(
           fontSize: 30,
           fontWeight: FontWeight.bold,
@@ -88,23 +106,31 @@ class AppTheme {
     );
   }
 
-  static ThemeData darkTheme(String languageCode) {
-    final fontFamily = FontFamilyHelper.getFontFamily(
-      languageCode,
-    );
+  static ThemeData darkTheme(
+    String languageCode,
+  ) {
+    final fontFamily =
+        FontFamilyHelper.getFontFamily(
+          languageCode,
+        );
     return ThemeData(
       colorScheme: ColorScheme.dark(
-        primary: DarkColors.instance.kPrimaryColor,
+        brightness: Brightness.dark,
+        primary:
+            DarkColors.instance.kPrimaryColor,
         onPrimary: DarkColors.instance.kPajeColor,
-        secondary: DarkColors.instance.kSecondaryColor,
+        secondary:
+            DarkColors.instance.kSecondaryColor,
         error: Colors.red,
         onError: Colors.white,
         primaryContainer:
             DarkColors.instance.kSecondaryColor,
         onPrimaryContainer:
             DarkColors.instance.kPrimaryColor,
-        surface: DarkColors.instance.kBackgroundColor,
-        onSurface: DarkColors.instance.kBlackColor,
+        surface:
+            DarkColors.instance.kBackgroundColor,
+        onSurface:
+            DarkColors.instance.kBlackColor,
         onSecondaryContainer:
             DarkColors.instance.kWhiteColor,
       ),
@@ -115,9 +141,13 @@ class AppTheme {
 
       textTheme: TextTheme(
         bodyLarge: TextStyle(color: Colors.white),
-        bodyMedium: TextStyle(color: Colors.white),
+        bodyMedium: TextStyle(
+          color: Colors.white,
+        ),
         bodySmall: TextStyle(color: Colors.white),
-        headlineSmall: TextStyle(color: Colors.white),
+        headlineSmall: TextStyle(
+          color: Colors.white,
+        ),
       ),
       scaffoldBackgroundColor:
           DarkColors.instance.kBackgroundColor,
@@ -129,7 +159,9 @@ class AppTheme {
         foregroundColor:
             DarkColors.instance.kPrimaryColor,
 
-        iconTheme: IconThemeData(color: Colors.white),
+        iconTheme: IconThemeData(
+          color: Colors.white,
+        ),
         titleTextStyle: TextStyle(
           fontSize: 30,
           fontWeight: FontWeight.bold,

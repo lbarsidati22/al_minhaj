@@ -20,7 +20,8 @@ class TimerNextPray extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
+            crossAxisAlignment:
+                CrossAxisAlignment.end,
             children: [
               Text(
                 'الظهر',
@@ -49,7 +50,7 @@ class TimerNextPray extends StatelessWidget {
               Text(
                 'الصلاة التالية: العصر',
                 style:
-                    AppFontStyles.styleBold14(
+                    AppFontStyles.styleRegular13(
                       context,
                     ).copyWith(
                       color: Theme.of(
@@ -58,18 +59,18 @@ class TimerNextPray extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
               ),
-              Text(
-                '2:50 مساءً',
-                style:
-                    AppFontStyles.styleBold14(
-                      context,
-                    ).copyWith(
-                      color: Theme.of(
-                        context,
-                      ).colorScheme.primary,
-                      fontWeight: FontWeight.bold,
-                    ),
-              ),
+              // Text(
+              //   '2:50 مساءً',
+              //   style:
+              //       AppFontStyles.styleBold14(
+              //         context,
+              //       ).copyWith(
+              //         color: Theme.of(
+              //           context,
+              //         ).colorScheme.primary,
+              //         fontWeight: FontWeight.bold,
+              //       ),
+              // ),
             ],
           ),
         ],
