@@ -3,7 +3,7 @@ import 'package:al_minhaj/core/utils/theme/app_theme.dart';
 import 'package:al_minhaj/core/widgets/sized_box.dart';
 import 'package:al_minhaj/features/all_ad3ye/presentation/views/al_ad3ya_screen.dart';
 import 'package:al_minhaj/features/azkar/presentation/views/azkar_screen.dart';
-import 'package:al_minhaj/features/hadith/presentation/views/ahadith_screen.dart';
+import 'package:al_minhaj/features/ahadith/presentation/views/ahadith_screen.dart';
 import 'package:al_minhaj/features/quran/presentation/views/quran_screen.dart';
 import 'package:al_minhaj/features/tesbih/presentation/views/tesbih_screen.dart';
 import 'package:al_minhaj/generated/l10n.dart';
@@ -27,9 +27,7 @@ class GridViewItem extends StatelessWidget {
       },
       {
         'icon': 'assets/images/image 17.png',
-        'label': S
-            .of(context)
-            .TheMostBeautifulNamesofAllah,
+        'label': S.of(context).TheMostBeautifulNamesofAllah,
         'nav': null,
       },
       {
@@ -49,13 +47,10 @@ class GridViewItem extends StatelessWidget {
       },
     ];
     return Padding(
-      padding: EdgeInsetsGeometry.symmetric(
-        horizontal: 24,
-      ),
+      padding: EdgeInsetsGeometry.symmetric(horizontal: 24),
       child: GridView.builder(
         shrinkWrap: true,
-        physics:
-            const NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         itemCount: gridItems.length,
         gridDelegate:
             const SliverGridDelegateWithFixedCrossAxisCount(
@@ -66,8 +61,7 @@ class GridViewItem extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              if (gridItems[index]['nav'] !=
-                  null) {
+              if (gridItems[index]['nav'] != null) {
                 Navigator.pushNamed(
                   context,
                   gridItems[index]['nav']!,
@@ -79,20 +73,14 @@ class GridViewItem extends StatelessWidget {
                 color: Theme.of(
                   context,
                 ).colorScheme.primaryContainer,
-                borderRadius:
-                    BorderRadius.circular(16),
+                borderRadius: BorderRadius.circular(16),
               ),
               child: Column(
-                mainAxisAlignment:
-                    MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset(
-                    gridItems[index]['icon'],
-                  ),
+                  Image.asset(gridItems[index]['icon']),
                   SizedBox(
-                    height: 1.heightPercent(
-                      context,
-                    ),
+                    height: 1.heightPercent(context),
                   ),
                   Text(
                     gridItems[index]['label'],
@@ -100,17 +88,13 @@ class GridViewItem extends StatelessWidget {
                         AppFontStyles.styleBold13(
                           context,
                         ).copyWith(
-                          color:
-                              AppTheme.isDark(
-                                context,
-                              )
+                          color: AppTheme.isDark(context)
                               ? Colors.white
                               : Colors.black,
                         ),
                     textAlign: TextAlign.center,
                     maxLines: 1,
-                    overflow:
-                        TextOverflow.ellipsis,
+                    overflow: TextOverflow.ellipsis,
                   ),
                 ],
               ),

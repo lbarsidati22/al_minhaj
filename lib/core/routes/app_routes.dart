@@ -1,16 +1,14 @@
 import 'package:al_minhaj/core/routes/base_routes.dart';
 import 'package:al_minhaj/features/all_ad3ye/presentation/views/al_ad3ya_screen.dart';
 import 'package:al_minhaj/features/azkar/presentation/views/azkar_screen.dart';
-import 'package:al_minhaj/features/hadith/presentation/views/ahadith_screen.dart';
+import 'package:al_minhaj/features/ahadith/presentation/views/ahadith_screen.dart';
 import 'package:al_minhaj/features/home/presentation/views/home_view.dart';
 import 'package:al_minhaj/features/on_bording/views/on_bording_view.dart';
 import 'package:al_minhaj/features/quran/presentation/views/quran_screen.dart';
 import 'package:al_minhaj/features/tesbih/presentation/views/tesbih_screen.dart';
 import 'package:flutter/material.dart';
 
-Route<dynamic> onGenerateRoute(
-  RouteSettings settings,
-) {
+Route<dynamic> onGenerateRoute(RouteSettings settings) {
   // final args = settings.arguments;
   switch (settings.name) {
     case OnBordingView.routeName:
@@ -48,9 +46,7 @@ Route<dynamic> onGenerateRoute(
       return BaseRoute(
         page: Scaffold(
           body: Center(
-            child: Text(
-              'No route found ${settings.name}',
-            ),
+            child: Text('No route found ${settings.name}'),
           ),
         ),
       );
