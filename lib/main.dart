@@ -38,10 +38,8 @@ class AlMinhag extends StatelessWidget {
         print(
           "FONT: ${FontFamilyHelper.getFontFamily(state.language)}",
         );
-
         return MaterialApp(
           title: 'AlMinhag',
-
           localizationsDelegates: [
             S.delegate,
             GlobalMaterialLocalizations.delegate,
