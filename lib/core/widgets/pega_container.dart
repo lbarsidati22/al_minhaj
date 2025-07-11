@@ -28,7 +28,9 @@ class PajeContainer extends StatelessWidget {
       ),
       child: Text(
         azkarModel?.aRABICTEXT ?? text,
-        style: AppFontStyles.styleSemiBold16(context),
+        style: AppFontStyles.styleRegular18(
+          context,
+        ).copyWith(fontWeight: FontWeight.w500),
       ),
     );
   }

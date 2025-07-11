@@ -15,17 +15,13 @@ class HomeView extends StatefulWidget {
   static const String routeName = 'homeView';
 
   @override
-  State<HomeView> createState() =>
-      _HomeViewState();
+  State<HomeView> createState() => _HomeViewState();
 }
 
 class _HomeViewState extends State<HomeView> {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<
-      SettingsCubit,
-      SettingsState
-    >(
+    return BlocBuilder<SettingsCubit, SettingsState>(
       builder: (context, state) {
         return Scaffold(
           appBar: HomeCustomAppBar(
@@ -38,11 +34,7 @@ class _HomeViewState extends State<HomeView> {
               children: [
                 PrayerTimeCard(),
                 TodayVarseCardSlidble(),
-                SizedBox(
-                  height: 2.heightPercent(
-                    context,
-                  ),
-                ),
+                SizedBox(height: 2.heightPercent(context)),
                 GridViewItem(),
               ],
             ),

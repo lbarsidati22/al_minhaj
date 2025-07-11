@@ -1,6 +1,3 @@
-import 'package:al_minhaj/core/utils/theme/app_font_styles.dart';
-import 'package:al_minhaj/core/utils/theme/app_theme.dart';
-import 'package:al_minhaj/core/widgets/sized_box.dart';
 import 'package:al_minhaj/features/all_ad3ye/presentation/views/al_ad3ya_screen.dart';
 import 'package:al_minhaj/features/azkar/presentation/views/azkar_screen.dart';
 import 'package:al_minhaj/features/ahadith/presentation/views/ahadith_screen.dart';
@@ -8,6 +5,8 @@ import 'package:al_minhaj/features/quran/presentation/views/quran_screen.dart';
 import 'package:al_minhaj/features/tesbih/presentation/views/tesbih_screen.dart';
 import 'package:al_minhaj/generated/l10n.dart';
 import 'package:flutter/material.dart';
+
+import 'the_6_grid_items.dart';
 
 class GridViewItem extends StatelessWidget {
   const GridViewItem({super.key});
@@ -59,46 +58,9 @@ class GridViewItem extends StatelessWidget {
               mainAxisSpacing: 10,
             ),
         itemBuilder: (context, index) {
-          return GestureDetector(
-            onTap: () {
-              if (gridItems[index]['nav'] != null) {
-                Navigator.pushNamed(
-                  context,
-                  gridItems[index]['nav']!,
-                );
-              }
-            },
-            child: Container(
-              decoration: BoxDecoration(
-                color: Theme.of(
-                  context,
-                ).colorScheme.primaryContainer,
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.asset(gridItems[index]['icon']),
-                  SizedBox(
-                    height: 1.heightPercent(context),
-                  ),
-                  Text(
-                    gridItems[index]['label'],
-                    style:
-                        AppFontStyles.styleBold13(
-                          context,
-                        ).copyWith(
-                          color: AppTheme.isDark(context)
-                              ? Colors.white
-                              : Colors.black,
-                        ),
-                    textAlign: TextAlign.center,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                  ),
-                ],
-              ),
-            ),
+          return The6GridItems(
+            gridItems: gridItems,
+            index: index,
           );
         },
       ),
