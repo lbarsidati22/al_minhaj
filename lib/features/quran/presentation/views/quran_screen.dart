@@ -6,8 +6,6 @@ class QuranScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(child: Text('Quran')),
-    );
+    return Scaffold(body: Center(child: Text('Quran')));
   }
 }

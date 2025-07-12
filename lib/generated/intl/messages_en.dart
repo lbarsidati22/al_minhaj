@@ -39,7 +39,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "chaptername": MessageLookupByLibrary.simpleMessage("Surah Name"),
     "chapternumber": MessageLookupByLibrary.simpleMessage("Verses Number"),
     "cheikhAudio": MessageLookupByLibrary.simpleMessage(
-      "Reciter Sheikh Mishary Rashid Al-Afasy",
+      "Cheikh Mohamed Ould Sidi Yahya",
     ),
     "contact": MessageLookupByLibrary.simpleMessage("Contact"),
     "dark": MessageLookupByLibrary.simpleMessage("Dark"),

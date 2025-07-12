@@ -1,5 +1,4 @@
 import 'package:al_minhaj/core/utils/theme/app_font_styles.dart';
-import 'package:al_minhaj/core/utils/theme/app_theme.dart';
 import 'package:al_minhaj/core/widgets/sized_box.dart';
 import 'package:al_minhaj/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -30,13 +29,10 @@ class _TodayVerseCardAudioState
   Future<void> _initalizePlayer() async {
     try {
       await _audioPlayer.setUrl(
-        'https://d1.islamhouse.com/data/ar/ih_sounds/chain_02/shar7-mosnd-manask-osaime/ar-01-shar7-mosnd-manask-osaime.mp3',
+        'https://filedn.com/lB8bgDEsPWLVIlRdbAmCPRm/%D8%A7%D9%84%D8%B9%D9%84%D9%88%D9%85%20%D8%A7%D9%84%D8%B4%D8%B1%D8%B9%D9%8A%D8%A9/%D8%A7%D9%84%D9%81%D9%82%D9%87/%D9%85%D9%86%20%D8%AF%D8%B1%D9%88%D8%B3%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D9%80%20%D9%85%D8%AD%D9%85%D8%AF%20%D9%88%D9%84%D8%AF%20%D8%B3%D9%8A%D8%AF%20%D9%8A%D8%AD%D9%8A/252%20%D8%AF%D8%B1%D9%88%D8%B3%20%D8%A7%D9%84%D8%A3%D8%B3%D8%A6%D9%84%D8%A9%20%D9%80%20%D9%85%D8%AD%D9%85%D8%AF%20%D9%88%D9%84%D8%AF%20%D8%B3%D9%8A%D8%AF%20%D9%8A%D8%AD%D9%8A%20%D9%80%20%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%88%D8%B9%D8%A9%20%D8%A7%D9%84%D8%B4%D9%86%D9%82%D9%8A%D8%B7%D9%8A%D8%A9.mp3',
       );
-      _duration =
-          _audioPlayer.duration?.inSeconds ?? 1;
-      _audioPlayer.positionStream.listen((
-        position,
-      ) {
+      _duration = _audioPlayer.duration?.inSeconds ?? 1;
+      _audioPlayer.positionStream.listen((position) {
         setState(() {
           _currentPosition = position.inSeconds;
         });
@@ -86,9 +82,7 @@ class _TodayVerseCardAudioState
             ).colorScheme.onPrimary,
             child: IconButton(
               onPressed: () {
-                if (_audioPlayer
-                    .playerState
-                    .playing) {
+                if (_audioPlayer.playerState.playing) {
                   _audioPlayer.pause();
                 } else {
                   _audioPlayer.play();
@@ -98,16 +92,14 @@ class _TodayVerseCardAudioState
                 _audioPlayer.playerState.playing
                     ? Icons.pause
                     : Icons.play_arrow,
-                color: Theme.of(
-                  context,
-                ).colorScheme.primary,
+                size: 30,
+
+                color: Colors.white,
                 //  size: 28,
               ),
             ),
           ),
-          SizedBox(
-            width: 2.widthPercent(context),
-          ),
+          SizedBox(width: 2.widthPercent(context)),
           Expanded(
             child: Column(
               crossAxisAlignment:
@@ -115,17 +107,9 @@ class _TodayVerseCardAudioState
               children: [
                 Text(
                   S.of(context).runMohadra,
-                  style:
-                      AppFontStyles.styleBold13(
-                        context,
-                      ).copyWith(
-                        color:
-                            AppTheme.isDark(
-                              context,
-                            )
-                            ? Colors.white
-                            : Colors.black,
-                      ),
+                  style: AppFontStyles.styleBold13(
+                    context,
+                  ).copyWith(color: Colors.white),
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
                 ),
@@ -137,30 +121,21 @@ class _TodayVerseCardAudioState
                         AppFontStyles.styleRegular13(
                           context,
                         ).copyWith(
-                          fontWeight:
-                              FontWeight.w500,
-                          color:
-                              AppTheme.isDark(
-                                context,
-                              )
-                              ? Colors.white
-                              : Colors.black,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.white,
                         ),
-                    overflow:
-                        TextOverflow.ellipsis,
+                    overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                   ),
                 ),
               ],
             ),
           ),
-          SizedBox(
-            width: 0.5.widthPercent(context),
-          ),
+          SizedBox(width: 0.5.widthPercent(context)),
           CircleAvatar(
             radius: 25,
-            backgroundImage: AssetImage(
-              'assets/images/alafasy.png',
+            backgroundImage: NetworkImage(
+              'https://echourouqmedia.net/sites/default/files/1_222.jpg',
             ),
           ),
         ],

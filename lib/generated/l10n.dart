@@ -99,10 +99,10 @@ class S {
     return Intl.message('Get Started', name: 'startNow', desc: '', args: []);
   }
 
-  /// `Reciter Sheikh Mishary Rashid Al-Afasy`
+  /// `Cheikh Mohamed Ould Sidi Yahya`
   String get cheikhAudio {
     return Intl.message(
-      'Reciter Sheikh Mishary Rashid Al-Afasy',
+      'Cheikh Mohamed Ould Sidi Yahya',
       name: 'cheikhAudio',
       desc: '',
       args: [],

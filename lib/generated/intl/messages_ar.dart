@@ -38,7 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "chaptername": MessageLookupByLibrary.simpleMessage("إسم السورة"),
     "chapternumber": MessageLookupByLibrary.simpleMessage("عدد الأيات"),
     "cheikhAudio": MessageLookupByLibrary.simpleMessage(
-      "القارئ الشيخ مشاري راشد العفاسي",
+      "الشيخ محمد ولد سيدي يحي",
     ),
     "contact": MessageLookupByLibrary.simpleMessage("اتصل بنا"),
     "dark": MessageLookupByLibrary.simpleMessage("ليلي"),
