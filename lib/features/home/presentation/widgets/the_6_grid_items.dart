@@ -25,28 +25,43 @@ class The6GridItems extends StatelessWidget {
         }
       },
       child: Container(
+        padding: EdgeInsets.only(bottom: 6),
         decoration: BoxDecoration(
           color: Theme.of(
             context,
           ).colorScheme.primaryContainer,
           borderRadius: BorderRadius.circular(16),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: Stack(
           children: [
-            Image.asset(gridItems[index]['icon']),
+            Center(
+              child: Image.asset(
+                height: index == 2
+                    ? 13.heightPercent(context)
+                    : 8.heightPercent(context),
+                gridItems[index]['icon'],
+              ),
+            ),
             SizedBox(height: 1.heightPercent(context)),
-            Text(
-              gridItems[index]['label'],
-              style: AppFontStyles.styleBold13(context)
-                  .copyWith(
-                    color: AppTheme.isDark(context)
-                        ? Colors.white
-                        : Colors.black,
-                  ),
-              textAlign: TextAlign.center,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
+
+            PositionedDirectional(
+              bottom: 0,
+              start: 0,
+              end: 0,
+              child: Text(
+                gridItems[index]['label'],
+                style:
+                    AppFontStyles.styleBold13(
+                      context,
+                    ).copyWith(
+                      color: AppTheme.isDark(context)
+                          ? Colors.white
+                          : Colors.black,
+                    ),
+                textAlign: TextAlign.center,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+              ),
             ),
           ],
         ),

@@ -1,4 +1,5 @@
 import 'package:al_minhaj/core/routes/base_routes.dart';
+import 'package:al_minhaj/features/al_mohadra/presentation/pages/al_mohadra_page.dart';
 import 'package:al_minhaj/features/all_ad3ye/presentation/views/al_ad3ya_screen.dart';
 import 'package:al_minhaj/features/azkar/presentation/views/azkar_screen.dart';
 import 'package:al_minhaj/features/ahadith/presentation/views/ahadith_screen.dart';
@@ -25,6 +26,8 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return BaseRoute(page: AzkarScreen());
     case TesbihScreen.routeName:
       return BaseRoute(page: TesbihScreen());
+    case AlMohadraPage.routeName:
+      return BaseRoute(page: AlMohadraPage());
     // case QuranDetails.routeName:
     //   final args =
     //       settings.arguments as Map<String, dynamic>;
@@ -46,7 +49,9 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       return BaseRoute(
         page: Scaffold(
           body: Center(
-            child: Text('No route found ${settings.name}'),
+            child: Text(
+              'No route found ${settings.name}',
+            ),
           ),
         ),
       );

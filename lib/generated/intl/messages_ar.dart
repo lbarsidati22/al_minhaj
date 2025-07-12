@@ -22,9 +22,6 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "TheMostBeautifulNamesofAllah": MessageLookupByLibrary.simpleMessage(
-      " أسماء الله الحسني",
-    ),
     "about": MessageLookupByLibrary.simpleMessage("عن التطبيق"),
     "ahzab": MessageLookupByLibrary.simpleMessage("الاحزاب"),
     "allCategories": MessageLookupByLibrary.simpleMessage("جميع التصنيفات"),
@@ -53,6 +50,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "kneeling": MessageLookupByLibrary.simpleMessage("الركوع"),
     "lang": MessageLookupByLibrary.simpleMessage("English"),
     "language": MessageLookupByLibrary.simpleMessage("اللغه"),
+    "lectures": MessageLookupByLibrary.simpleMessage("المحاضرات"),
     "light": MessageLookupByLibrary.simpleMessage("نهاري"),
     "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
     "moreapps": MessageLookupByLibrary.simpleMessage("المزيد من التطبيقات"),

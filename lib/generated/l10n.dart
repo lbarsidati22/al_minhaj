@@ -169,14 +169,9 @@ class S {
     );
   }
 
-  /// `The Most Beautiful Names of Allah`
-  String get TheMostBeautifulNamesofAllah {
-    return Intl.message(
-      'The Most Beautiful Names of Allah',
-      name: 'TheMostBeautifulNamesofAllah',
-      desc: '',
-      args: [],
-    );
+  /// `Lectures`
+  String get lectures {
+    return Intl.message('Lectures', name: 'lectures', desc: '', args: []);
   }
 
   /// `Azkar`

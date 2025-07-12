@@ -1,3 +1,4 @@
+import 'package:al_minhaj/features/al_mohadra/presentation/pages/al_mohadra_page.dart';
 import 'package:al_minhaj/features/all_ad3ye/presentation/views/al_ad3ya_screen.dart';
 import 'package:al_minhaj/features/azkar/presentation/views/azkar_screen.dart';
 import 'package:al_minhaj/features/ahadith/presentation/views/ahadith_screen.dart';
@@ -25,9 +26,9 @@ class GridViewItem extends StatelessWidget {
         'nav': TesbihScreen.routeName,
       },
       {
-        'icon': 'assets/images/image 17.png',
-        'label': S.of(context).TheMostBeautifulNamesofAllah,
-        'nav': null,
+        'icon': 'assets/images/lectures_2.png',
+        'label': S.of(context).lectures,
+        'nav': AlMohadraPage.routeName,
       },
       {
         'icon': 'assets/images/image 16.png',
@@ -46,7 +47,9 @@ class GridViewItem extends StatelessWidget {
       },
     ];
     return Padding(
-      padding: EdgeInsetsGeometry.symmetric(horizontal: 24),
+      padding: EdgeInsetsGeometry.symmetric(
+        horizontal: 24,
+      ),
       child: GridView.builder(
         shrinkWrap: true,
         physics: const NeverScrollableScrollPhysics(),
