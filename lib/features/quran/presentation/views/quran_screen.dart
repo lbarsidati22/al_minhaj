@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quran/quran.dart' as quran;
 
 class QuranScreen extends StatelessWidget {
   const QuranScreen({super.key});
