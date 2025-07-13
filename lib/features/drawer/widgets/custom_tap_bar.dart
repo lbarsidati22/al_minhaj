@@ -1,10 +1,15 @@
 import 'package:al_minhaj/core/utils/theme/app_font_styles.dart';
 import 'package:al_minhaj/core/widgets/sized_box.dart';
-import 'package:al_minhaj/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class CustomTapBar extends StatelessWidget {
-  const CustomTapBar({super.key});
+  final String tab1Name;
+  final String tab2Name;
+  const CustomTapBar({
+    super.key,
+    required this.tab1Name,
+    required this.tab2Name,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -12,16 +17,19 @@ class CustomTapBar extends StatelessWidget {
       height: 7.heightPercent(context),
       child: Container(
         decoration: BoxDecoration(
-          color: Theme.of(context).colorScheme.primary,
+          color: Theme.of(
+            context,
+          ).colorScheme.primary,
           borderRadius: BorderRadius.circular(13),
         ),
         child: TabBar(
           indicatorSize: TabBarIndicatorSize.tab,
           dividerHeight: 0,
-          indicatorPadding: const EdgeInsets.symmetric(
-            horizontal: 5,
-            vertical: 5,
-          ),
+          indicatorPadding:
+              const EdgeInsets.symmetric(
+                horizontal: 5,
+                vertical: 5,
+              ),
           indicator: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
             color: Theme.of(
@@ -35,7 +43,7 @@ class CustomTapBar extends StatelessWidget {
 
           tabs: [
             Text(
-              S.of(context).settings,
+              tab1Name,
               style:
                   AppFontStyles.styleSemiBold16(
                     context,
@@ -46,7 +54,7 @@ class CustomTapBar extends StatelessWidget {
                   ),
             ),
             Text(
-              S.of(context).favorite,
+              tab2Name,
               style:
                   AppFontStyles.styleSemiBold16(
                     context,

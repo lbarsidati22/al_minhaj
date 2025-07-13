@@ -26,7 +26,7 @@ class GridViewItem extends StatelessWidget {
         'nav': TesbihScreen.routeName,
       },
       {
-        'icon': 'assets/images/lectures_2.png',
+        'icon': 'assets/images/lectures.png',
         'label': S.of(context).lectures,
         'nav': AlMohadraPage.routeName,
       },

@@ -3,6 +3,7 @@ import 'package:al_minhaj/features/drawer/widgets/custom_card.dart';
 import 'package:al_minhaj/features/drawer/widgets/custom_tap_bar.dart';
 import 'package:al_minhaj/features/drawer/widgets/favorite_tab.dart';
 import 'package:al_minhaj/features/drawer/widgets/settings_tab.dart';
+import 'package:al_minhaj/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -32,7 +33,14 @@ class CustomDrawer extends StatelessWidget {
                   length: 2,
                   child: Column(
                     children: [
-                      CustomTapBar(),
+                      CustomTapBar(
+                        tab1Name: S
+                            .of(context)
+                            .settings,
+                        tab2Name: S
+                            .of(context)
+                            .favorite,
+                      ),
                       Expanded(
                         child: TabBarView(
                           children: [
