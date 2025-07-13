@@ -5,33 +5,24 @@ import 'package:flutter/material.dart';
 class AppTheme {
   // static bool isDark = false;
 
-  static Color lightPrimaryColor = Color(
-    0xFFB7935F,
-  );
-  static Color darkPrimaryColor = Color(
-    0xFF141A2E,
-  );
+  static Color lightPrimaryColor = Color(0xFFB7935F);
+  static Color darkPrimaryColor = Color(0xFF141A2E);
   static Color darkSecondary = Color(0xFFFACC1D);
   static bool isDark(BuildContext context) {
     return Theme.of(context).brightness ==
         Brightness.dark;
   }
 
-  static ThemeData lightTheme(
-    String languageCode,
-  ) {
-    final fontFamily =
-        FontFamilyHelper.getFontFamily(
-          languageCode,
-        );
+  static ThemeData lightTheme(String languageCode) {
+    final fontFamily = FontFamilyHelper.getFontFamily(
+      languageCode,
+    );
 
     return ThemeData(
       colorScheme: ColorScheme.light(
         brightness: Brightness.light,
-        primary:
-            LightColors.instance.kPrimaryColor,
-        onPrimary:
-            LightColors.instance.kPajeColor,
+        primary: LightColors.instance.kPrimaryColor,
+        onPrimary: LightColors.instance.kPajeColor,
         secondary:
             LightColors.instance.kSecondaryColor,
         error: Colors.red,
@@ -42,8 +33,7 @@ class AppTheme {
             LightColors.instance.kPrimaryColor,
         surface:
             LightColors.instance.kBackgroundColor,
-        onSurface:
-            LightColors.instance.kBlackColor,
+        onSurface: LightColors.instance.kBlackColor,
         onSecondaryContainer:
             LightColors.instance.kWhiteColor,
       ),
@@ -52,14 +42,34 @@ class AppTheme {
         backgroundColor: Colors.black,
       ),
       textTheme: TextTheme(
+        displayLarge: TextStyle(
+          fontSize: 32,
+          fontFamily: 'AlNile',
+          fontWeight: FontWeight.w400,
+          color: LightColors.instance.kPrimaryColor,
+        ),
+        displayMedium: TextStyle(
+          fontSize: 24,
+          fontFamily: 'AlNile',
+          fontWeight: FontWeight.w400,
+          color: LightColors.instance.kPrimaryColor,
+        ),
+        displaySmall: TextStyle(
+          fontSize: 18,
+          fontFamily: 'AlNile',
+          fontWeight: FontWeight.w400,
+          color: LightColors.instance.kPrimaryColor,
+        ),
+        labelSmall: TextStyle(
+          fontSize: 16,
+          fontFamily: 'AlNile',
+          fontWeight: FontWeight.w400,
+          color: LightColors.instance.kPrimaryColor,
+        ),
         bodyLarge: TextStyle(color: Colors.black),
-        bodyMedium: TextStyle(
-          color: Colors.black,
-        ),
+        bodyMedium: TextStyle(color: Colors.black),
         bodySmall: TextStyle(color: Colors.black),
-        headlineSmall: TextStyle(
-          color: Colors.black,
-        ),
+        headlineSmall: TextStyle(color: Colors.black),
       ),
       scaffoldBackgroundColor:
           LightColors.instance.kBackgroundColor,
@@ -72,9 +82,7 @@ class AppTheme {
         foregroundColor:
             LightColors.instance.kPrimaryColor,
 
-        iconTheme: IconThemeData(
-          color: Colors.black,
-        ),
+        iconTheme: IconThemeData(color: Colors.black),
         titleTextStyle: TextStyle(
           fontSize: 30,
           fontWeight: FontWeight.bold,
@@ -106,18 +114,14 @@ class AppTheme {
     );
   }
 
-  static ThemeData darkTheme(
-    String languageCode,
-  ) {
-    final fontFamily =
-        FontFamilyHelper.getFontFamily(
-          languageCode,
-        );
+  static ThemeData darkTheme(String languageCode) {
+    final fontFamily = FontFamilyHelper.getFontFamily(
+      languageCode,
+    );
     return ThemeData(
       colorScheme: ColorScheme.dark(
         brightness: Brightness.dark,
-        primary:
-            DarkColors.instance.kPrimaryColor,
+        primary: DarkColors.instance.kPrimaryColor,
         onPrimary: DarkColors.instance.kPajeColor,
         secondary:
             DarkColors.instance.kSecondaryColor,
@@ -127,10 +131,8 @@ class AppTheme {
             DarkColors.instance.kSecondaryColor,
         onPrimaryContainer:
             DarkColors.instance.kPrimaryColor,
-        surface:
-            DarkColors.instance.kBackgroundColor,
-        onSurface:
-            DarkColors.instance.kBlackColor,
+        surface: DarkColors.instance.kBackgroundColor,
+        onSurface: DarkColors.instance.kBlackColor,
         onSecondaryContainer:
             DarkColors.instance.kWhiteColor,
       ),
@@ -140,14 +142,35 @@ class AppTheme {
       ),
 
       textTheme: TextTheme(
+        /// req'a font
+        displayLarge: TextStyle(
+          fontSize: 32,
+          fontFamily: 'AlNile',
+          fontWeight: FontWeight.w400,
+          color: DarkColors.instance.kPrimaryColor,
+        ),
+        displayMedium: TextStyle(
+          fontSize: 24,
+          fontFamily: 'AlNile',
+          fontWeight: FontWeight.w400,
+          color: DarkColors.instance.kPrimaryColor,
+        ),
+        displaySmall: TextStyle(
+          fontSize: 18,
+          fontFamily: 'AlNile',
+          fontWeight: FontWeight.w400,
+          color: DarkColors.instance.kPrimaryColor,
+        ),
+        labelSmall: TextStyle(
+          fontSize: 16,
+          fontFamily: 'AlNile',
+          fontWeight: FontWeight.w400,
+          color: DarkColors.instance.kPrimaryColor,
+        ),
         bodyLarge: TextStyle(color: Colors.white),
-        bodyMedium: TextStyle(
-          color: Colors.white,
-        ),
+        bodyMedium: TextStyle(color: Colors.white),
         bodySmall: TextStyle(color: Colors.white),
-        headlineSmall: TextStyle(
-          color: Colors.white,
-        ),
+        headlineSmall: TextStyle(color: Colors.white),
       ),
       scaffoldBackgroundColor:
           DarkColors.instance.kBackgroundColor,
@@ -159,9 +182,7 @@ class AppTheme {
         foregroundColor:
             DarkColors.instance.kPrimaryColor,
 
-        iconTheme: IconThemeData(
-          color: Colors.white,
-        ),
+        iconTheme: IconThemeData(color: Colors.white),
         titleTextStyle: TextStyle(
           fontSize: 30,
           fontWeight: FontWeight.bold,

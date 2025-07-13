@@ -2,7 +2,7 @@ import 'package:al_minhaj/features/al_mohadra/presentation/pages/al_mohadra_page
 import 'package:al_minhaj/features/all_ad3ye/presentation/views/al_ad3ya_screen.dart';
 import 'package:al_minhaj/features/azkar/presentation/views/azkar_screen.dart';
 import 'package:al_minhaj/features/ahadith/presentation/views/ahadith_screen.dart';
-import 'package:al_minhaj/features/quran/presentation/views/quran_screen.dart';
+import 'package:al_minhaj/features/quran/presentation/widgets/sura_details_screen.dart';
 import 'package:al_minhaj/features/tesbih/presentation/views/tesbih_screen.dart';
 import 'package:al_minhaj/generated/l10n.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +33,7 @@ class GridViewItem extends StatelessWidget {
       {
         'icon': 'assets/images/image 16.png',
         'label': S.of(context).quran,
-        'nav': QuranScreen.routeName,
+        'nav': SuraDetailsScreen.routeName,
       },
       {
         'icon': 'assets/images/image 7.png',

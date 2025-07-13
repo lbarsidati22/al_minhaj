@@ -19,6 +19,7 @@ dependencies:
   dio: ^5.8.0+1
   bloc: ^9.0.0
   iconsax: ^0.0.8
+  iconsax_plus: ^1.0.0
   adhan: ^2.0.0+1
   geolocator: ^14.0.1
   intl: ^0.20.2
@@ -64,7 +65,18 @@ flutter:
       fonts:
         - asset: assets/fonts/digital-7.ttf
           weight: 400 # Regular weight
-  #
+
+    - family: UthmanicHafs
+      fonts:
+        - asset: assets/fonts/UthmanicHafs1 Ver13.ttf
+          weight: 400 # Regular weight
+
+    - family: AlNile
+      fonts:
+        - asset: assets/fonts/Al Nile.ttc
+          weight: 400 # Regular weight
+        - asset: assets/fonts/Al Nile.ttc
+          weight: 700 # Bold weight
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 flutter_intl:

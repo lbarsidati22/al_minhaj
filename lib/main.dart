@@ -6,7 +6,9 @@ import 'package:al_minhaj/core/settings/cubit/settings_state.dart';
 import 'package:al_minhaj/core/utils/theme/app_theme.dart';
 import 'package:al_minhaj/core/utils/theme/font_family_helper.dart';
 import 'package:al_minhaj/features/on_bording/views/on_bording_view.dart';
+import 'package:al_minhaj/features/quran/cubit/quran_cubit.dart';
 import 'package:al_minhaj/generated/l10n.dart';
+import 'package:al_minhaj/navigation_key.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -33,29 +35,42 @@ class AlMinhag extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<SettingsCubit, SettingsState>(
-      builder: (context, state) {
-        print(
-          "FONT: ${FontFamilyHelper.getFontFamily(state.language)}",
-        );
-        return MaterialApp(
-          title: 'AlMinhag',
-          localizationsDelegates: [
-            S.delegate,
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
-          supportedLocales: S.delegate.supportedLocales,
-          debugShowCheckedModeBanner: false,
-          locale: Locale(state.language),
-          theme: AppTheme.lightTheme(state.language),
-          darkTheme: AppTheme.darkTheme(state.language),
-          themeMode: state.themeMode,
-          onGenerateRoute: AppRoutes.onGenerateRoute,
-          initialRoute: OnBordingView.routeName,
-        );
-      },
+    // final GlobalKey<NavigatorState> navigatorKey =
+    //     GlobalKey<NavigatorState>();
+
+    return BlocProvider(
+      create: (context) => QuranCubit(),
+      child: BlocBuilder<SettingsCubit, SettingsState>(
+        builder: (context, state) {
+          print(
+            "FONT: ${FontFamilyHelper.getFontFamily(state.language)}",
+          );
+          return MaterialApp(
+            navigatorKey: navigatorKey,
+            title: 'AlMinhag',
+            localizationsDelegates: [
+              S.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales:
+                S.delegate.supportedLocales,
+            debugShowCheckedModeBanner: false,
+            locale: Locale(state.language),
+            theme: AppTheme.lightTheme(
+              state.language,
+            ),
+            darkTheme: AppTheme.darkTheme(
+              state.language,
+            ),
+            themeMode: state.themeMode,
+            onGenerateRoute:
+                AppRoutes.onGenerateRoute,
+            initialRoute: OnBordingView.routeName,
+          );
+        },
+      ),
     );
   }
 }

@@ -21,6 +21,7 @@ class The6GridItems extends StatelessWidget {
           Navigator.pushNamed(
             context,
             gridItems[index]['nav']!,
+            arguments: index == 3 ? 1 : null,
           );
         }
       },
@@ -42,7 +43,9 @@ class The6GridItems extends StatelessWidget {
                 gridItems[index]['icon'],
               ),
             ),
-            SizedBox(height: 1.heightPercent(context)),
+            SizedBox(
+              height: 1.heightPercent(context),
+            ),
 
             PositionedDirectional(
               bottom: 0,

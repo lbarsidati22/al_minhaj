@@ -11,8 +11,7 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width:
-          MediaQuery.of(context).size.width / 1.1,
+      width: MediaQuery.of(context).size.width / 1.1,
       child: Drawer(
         child: Padding(
           padding: EdgeInsets.symmetric(
