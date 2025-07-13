@@ -1,6 +1,7 @@
 import 'package:al_minhaj/core/settings/cubit/settings_cubit.dart';
 import 'package:al_minhaj/core/utils/theme/app_font_styles.dart';
 import 'package:al_minhaj/core/utils/theme/app_theme.dart';
+import 'package:al_minhaj/core/utils/theme/font_family_helper.dart';
 import 'package:al_minhaj/core/widgets/class_lang.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,16 +25,17 @@ class HomeCustomAppBar extends StatelessWidget
       centerTitle: centerTitle,
       title: Text(
         title ?? '',
-        style: Theme.of(context)
-            .textTheme
-            .displayLarge!
-            .copyWith(
-              color: AppTheme.isDark(context)
-                  ? Theme.of(
-                      context,
-                    ).colorScheme.primary
-                  : Colors.black,
-            ),
+        style: FontFamilyHelper.isArabic
+            ? Theme.of(
+                context,
+              ).textTheme.displayLarge!.copyWith(
+                color: AppTheme.isDark(context)
+                    ? Theme.of(
+                        context,
+                      ).colorScheme.primary
+                    : Colors.black,
+              )
+            : Theme.of(context).textTheme.titleLarge,
       ),
       leading: IconButton(
         onPressed: () {

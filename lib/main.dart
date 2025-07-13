@@ -42,6 +42,12 @@ class AlMinhag extends StatelessWidget {
       create: (context) => QuranCubit(),
       child: BlocBuilder<SettingsCubit, SettingsState>(
         builder: (context, state) {
+          if (state.language == 'ar') {
+            FontFamilyHelper.isArabic = true;
+          } else {
+            FontFamilyHelper.isArabic = false;
+          }
+          print('${FontFamilyHelper.isArabic}');
           print(
             "FONT: ${FontFamilyHelper.getFontFamily(state.language)}",
           );

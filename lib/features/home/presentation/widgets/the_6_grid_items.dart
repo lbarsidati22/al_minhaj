@@ -1,3 +1,4 @@
+import 'package:al_minhaj/core/utils/theme/font_family_helper.dart';
 import 'package:al_minhaj/core/widgets/sized_box.dart';
 import 'package:flutter/material.dart';
 
@@ -51,12 +52,17 @@ class The6GridItems extends StatelessWidget {
               end: 0,
               child: Text(
                 gridItems[index]['label'],
-                style: Theme.of(context)
-                    .textTheme
-                    .displaySmall!
-                    .copyWith(
-                      fontWeight: FontWeight.w800,
-                    ),
+                style: FontFamilyHelper.isArabic
+                    ? Theme.of(context)
+                          .textTheme
+                          .displaySmall!
+                          .copyWith(
+                            fontWeight:
+                                FontWeight.w800,
+                          )
+                    : Theme.of(
+                        context,
+                      ).textTheme.titleSmall,
                 textAlign: TextAlign.center,
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,

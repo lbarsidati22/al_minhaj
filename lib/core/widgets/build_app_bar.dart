@@ -1,4 +1,5 @@
 import 'package:al_minhaj/core/utils/theme/app_theme.dart';
+import 'package:al_minhaj/core/utils/theme/font_family_helper.dart';
 import 'package:flutter/material.dart';
 
 AppBar buildAppBar({
@@ -29,12 +30,15 @@ AppBar buildAppBar({
     centerTitle: true,
     title: Text(
       title,
-      style: Theme.of(context).textTheme.displayLarge!
-          .copyWith(
-            color: AppTheme.isDark(context)
-                ? Colors.white
-                : Colors.black,
-          ),
+      style: FontFamilyHelper.isArabic
+          ? Theme.of(
+              context,
+            ).textTheme.displayLarge!.copyWith(
+              color: AppTheme.isDark(context)
+                  ? Colors.white
+                  : Colors.black,
+            )
+          : Theme.of(context).textTheme.titleLarge,
     ),
   );
 }
