@@ -1,4 +1,4 @@
-import 'package:al_minhaj/core/utils/theme/app_font_styles.dart';
+import 'package:al_minhaj/core/utils/theme/app_theme.dart';
 import 'package:al_minhaj/features/azkar/presentation/cubit/azkar_cubit.dart';
 import 'package:al_minhaj/features/azkar/presentation/widgets/azkar_animated_drop.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,10 @@ class _AzkarPageContentState
     {"name": "الذكر بعد الفراغ من الوضوء", "id": 9},
     {"name": "الذكر عند الخروج من المنزل", "id": 10},
     {"name": "الذكر عند دخول المنزل", "id": 11},
-    {"name": "الأذكار بعد السلام من الصلاة", "id": 25},
+    {
+      "name": "الأذكار بعد السلام من الصلاة",
+      "id": 25,
+    },
   ];
   int? expandedIndex;
 
@@ -37,7 +40,9 @@ class _AzkarPageContentState
           return Column(
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 10),
+                padding: EdgeInsets.symmetric(
+                  vertical: 10,
+                ),
                 child: GestureDetector(
                   onTap: () {
                     setState(() {
@@ -47,47 +52,57 @@ class _AzkarPageContentState
                         expandedIndex = index;
                       }
                       if (expandedIndex != null) {
-                        context.read<AzkarCubit>().getAzkar(
-                          type: type["name"],
-                          id: type["id"],
-                        );
+                        context
+                            .read<AzkarCubit>()
+                            .getAzkar(
+                              type: type["name"],
+                              id: type["id"],
+                            );
                       }
                     });
                   },
                   child: Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 10,
-                    ),
+                    padding:
+                        const EdgeInsets.symmetric(
+                          horizontal: 10,
+                        ),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(
-                        12,
-                      ),
+                      borderRadius:
+                          BorderRadius.circular(12),
                       color: Theme.of(
                         context,
                       ).colorScheme.primary,
                     ),
                     child: Row(
                       mainAxisAlignment:
-                          MainAxisAlignment.spaceBetween,
+                          MainAxisAlignment
+                              .spaceBetween,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(
-                            16.0,
-                          ),
+                          padding:
+                              const EdgeInsets.all(
+                                16.0,
+                              ),
                           child: Text(
                             type["name"],
-                            style:
-                                AppFontStyles.styleBold16(
-                                  context,
-                                ).copyWith(
-                                  color: Theme.of(
-                                    context,
-                                  ).colorScheme.secondary,
+                            style: Theme.of(context)
+                                .textTheme
+                                .displayMedium!
+                                .copyWith(
+                                  fontWeight:
+                                      FontWeight.w700,
+                                  color:
+                                      AppTheme.isDark(
+                                        context,
+                                      )
+                                      ? Colors.black
+                                      : Colors.white,
                                 ),
                           ),
                         ),
                         AnimatedRotation(
-                          turns: expandedIndex == index
+                          turns:
+                              expandedIndex == index
                               ? 0.25
                               : 0.0,
                           duration: const Duration(

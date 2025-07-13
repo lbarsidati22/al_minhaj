@@ -1,4 +1,3 @@
-import 'package:al_minhaj/core/utils/theme/app_font_styles.dart';
 import 'package:al_minhaj/features/azkar/model/azkar_model.dart';
 import 'package:flutter/material.dart';
 
@@ -28,9 +27,9 @@ class PajeContainer extends StatelessWidget {
       ),
       child: Text(
         azkarModel?.aRABICTEXT ?? text,
-        style: AppFontStyles.styleRegular18(
+        style: Theme.of(
           context,
-        ).copyWith(fontWeight: FontWeight.w500),
+        ).textTheme.displayMedium,
       ),
     );
   }

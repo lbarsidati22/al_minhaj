@@ -1,4 +1,4 @@
-import 'package:al_minhaj/core/utils/theme/app_font_styles.dart';
+import 'package:al_minhaj/core/utils/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 AppBar buildAppBar({
@@ -29,7 +29,12 @@ AppBar buildAppBar({
     centerTitle: true,
     title: Text(
       title,
-      style: AppFontStyles.styleBold20(context),
+      style: Theme.of(context).textTheme.displayLarge!
+          .copyWith(
+            color: AppTheme.isDark(context)
+                ? Colors.white
+                : Colors.black,
+          ),
     ),
   );
 }

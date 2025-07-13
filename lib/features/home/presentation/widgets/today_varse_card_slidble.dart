@@ -4,8 +4,7 @@ import 'package:al_minhaj/features/home/presentation/widgets/today_varse_card_pa
 import 'package:al_minhaj/generated/l10n.dart';
 import 'package:flutter/material.dart';
 
-class TodayVarseCardSlidble
-    extends StatefulWidget {
+class TodayVarseCardSlidble extends StatefulWidget {
   const TodayVarseCardSlidble({super.key});
 
   @override
@@ -52,9 +51,7 @@ class _TodayVarseCardSlidbleState
             ],
           ),
         ),
-        SizedBox(
-          height: 2.heightPercent(context),
-        ),
+        SizedBox(height: 2.heightPercent(context)),
         SizedBox(
           height: 23.heightPercent(context),
           child: PageView.builder(
@@ -81,8 +78,9 @@ class _TodayVarseCardSlidbleState
               int reverseIndex = 2 - index;
               return AnimatedContainer(
                 decoration: BoxDecoration(
-                  borderRadius:
-                      BorderRadius.circular(20),
+                  borderRadius: BorderRadius.circular(
+                    20,
+                  ),
                   color: dotsIndex == reverseIndex
                       ? Theme.of(
                           context,
@@ -92,10 +90,9 @@ class _TodayVarseCardSlidbleState
                             .onSurface
                             .withOpacity(0.5),
                 ),
-                margin:
-                    const EdgeInsets.symmetric(
-                      horizontal: 2,
-                    ),
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 2,
+                ),
                 duration: const Duration(
                   milliseconds: 300,
                 ),

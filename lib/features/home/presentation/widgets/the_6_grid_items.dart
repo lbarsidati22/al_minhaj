@@ -1,5 +1,3 @@
-import 'package:al_minhaj/core/utils/theme/app_font_styles.dart';
-import 'package:al_minhaj/core/utils/theme/app_theme.dart';
 import 'package:al_minhaj/core/widgets/sized_box.dart';
 import 'package:flutter/material.dart';
 
@@ -26,7 +24,7 @@ class The6GridItems extends StatelessWidget {
         }
       },
       child: Container(
-        padding: EdgeInsets.only(bottom: 6),
+        padding: EdgeInsets.only(bottom: 2),
         decoration: BoxDecoration(
           color: Theme.of(
             context,
@@ -38,8 +36,8 @@ class The6GridItems extends StatelessWidget {
             Center(
               child: Image.asset(
                 height: index == 2
-                    ? 13.heightPercent(context)
-                    : 8.heightPercent(context),
+                    ? 12.heightPercent(context)
+                    : 9.heightPercent(context),
                 gridItems[index]['icon'],
               ),
             ),
@@ -53,13 +51,11 @@ class The6GridItems extends StatelessWidget {
               end: 0,
               child: Text(
                 gridItems[index]['label'],
-                style:
-                    AppFontStyles.styleBold13(
-                      context,
-                    ).copyWith(
-                      color: AppTheme.isDark(context)
-                          ? Colors.white
-                          : Colors.black,
+                style: Theme.of(context)
+                    .textTheme
+                    .displaySmall!
+                    .copyWith(
+                      fontWeight: FontWeight.w800,
                     ),
                 textAlign: TextAlign.center,
                 maxLines: 1,

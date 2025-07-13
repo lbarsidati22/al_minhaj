@@ -22,7 +22,10 @@ class TesbihScreen extends StatelessWidget {
         create: (context) => TesbihCubit(),
         child: Builder(
           builder: (context) {
-            return BlocBuilder<TesbihCubit, TesbihState>(
+            return BlocBuilder<
+              TesbihCubit,
+              TesbihState
+            >(
               builder: (context, state) {
                 return SingleChildScrollView(
                   child: Column(
@@ -31,21 +34,27 @@ class TesbihScreen extends StatelessWidget {
                         padding: EdgeInsets.all(16),
                         child: ListView.separated(
                           shrinkWrap: true,
-                          itemCount: state.items.length,
+                          itemCount:
+                              state.items.length,
 
                           itemBuilder: (context, index) {
-                            final item = state.items[index];
+                            final item =
+                                state.items[index];
                             final isSelected =
                                 state.selectedIndex ==
                                 index;
 
                             return Card(
                               shadowColor:
-                                  AppTheme.isDark(context)
+                                  AppTheme.isDark(
+                                    context,
+                                  )
                                   ? null
                                   : Colors.black,
                               elevation:
-                                  AppTheme.isDark(context)
+                                  AppTheme.isDark(
+                                    context,
+                                  )
                                   ? 0
                                   : 5,
                               child: Container(
@@ -55,14 +64,19 @@ class TesbihScreen extends StatelessWidget {
                                         12,
                                       ),
                                   color: isSelected
-                                      ? Color(0xff785548)
-                                      : Theme.of(context)
+                                      ? Color(
+                                          0xff785548,
+                                        )
+                                      : Theme.of(
+                                              context,
+                                            )
                                             .colorScheme
                                             .primaryContainer,
                                 ),
                                 child: ListTile(
                                   leading: Icon(
-                                    item.count == item.limit
+                                    item.count ==
+                                            item.limit
                                         ? Icons.check
                                         : Icons.close,
                                     color:
@@ -75,13 +89,16 @@ class TesbihScreen extends StatelessWidget {
                                   title: Text(
                                     item.text,
                                     textAlign:
-                                        TextAlign.right,
-                                    style:
-                                        AppFontStyles.styleBold20(
-                                          context,
-                                        ).copyWith(
-                                          color: isSelected
-                                              ? Colors.white
+                                        TextAlign
+                                            .right,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .displayLarge!
+                                        .copyWith(
+                                          color:
+                                              isSelected
+                                              ? Colors
+                                                    .white
                                               : Colors
                                                     .black,
                                         ),
@@ -92,16 +109,22 @@ class TesbihScreen extends StatelessWidget {
                                         AppFontStyles.styleBold16(
                                           context,
                                         ).copyWith(
-                                          color: isSelected
-                                              ? Colors.white
+                                          color:
+                                              isSelected
+                                              ? Colors
+                                                    .white
                                               : Colors
                                                     .black,
                                         ),
                                   ),
                                   onTap: () {
                                     context
-                                        .read<TesbihCubit>()
-                                        .selecItem(index);
+                                        .read<
+                                          TesbihCubit
+                                        >()
+                                        .selecItem(
+                                          index,
+                                        );
                                   },
                                 ),
                               ),
@@ -110,45 +133,63 @@ class TesbihScreen extends StatelessWidget {
                           separatorBuilder:
                               (context, index) {
                                 return SizedBox(
-                                  height: 1.heightPercent(
-                                    context,
-                                  ),
+                                  height: 1
+                                      .heightPercent(
+                                        context,
+                                      ),
                                 );
                               },
                         ),
                       ),
                       SizedBox(
-                        height: 1.heightPercent(context),
+                        height: 1.heightPercent(
+                          context,
+                        ),
                       ),
 
                       Text(
                         state
-                            .items[state.selectedIndex]
+                            .items[state
+                                .selectedIndex]
                             .text,
-                        style: AppFontStyles.styleBold20(
-                          context,
-                        ),
+                        style: Theme.of(context)
+                            .textTheme
+                            .displayLarge!
+                            .copyWith(
+                              color:
+                                  AppTheme.isDark(
+                                    context,
+                                  )
+                                  ? Colors.white
+                                  : Colors.black,
+                            ),
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(
-                        height: 4.heightPercent(context),
+                        height: 4.heightPercent(
+                          context,
+                        ),
                       ),
                       Container(
-                        padding: const EdgeInsets.only(
-                          right: 88,
-                          left: 88,
-                          bottom: 8,
-                        ),
+                        padding:
+                            const EdgeInsets.only(
+                              right: 88,
+                              left: 88,
+                              bottom: 8,
+                            ),
                         decoration: BoxDecoration(
-                          color: Theme.of(
-                            context,
-                          ).colorScheme.primaryContainer,
+                          color: Theme.of(context)
+                              .colorScheme
+                              .primaryContainer,
                           borderRadius:
-                              BorderRadius.circular(16),
+                              BorderRadius.circular(
+                                16,
+                              ),
                         ),
                         child: Text(
                           state
-                              .items[state.selectedIndex]
+                              .items[state
+                                  .selectedIndex]
                               .count
                               .toString()
                               .padLeft(2, '0'),
@@ -162,7 +203,9 @@ class TesbihScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 2.heightPercent(context),
+                        height: 2.heightPercent(
+                          context,
+                        ),
                       ),
                       Column(
                         mainAxisAlignment:
@@ -196,10 +239,13 @@ class TesbihScreen extends StatelessWidget {
                               height: 30.widthPercent(
                                 context,
                               ),
-                              decoration: BoxDecoration(
-                                color: Colors.brown,
-                                shape: BoxShape.circle,
-                              ),
+                              decoration:
+                                  BoxDecoration(
+                                    color:
+                                        Colors.brown,
+                                    shape: BoxShape
+                                        .circle,
+                                  ),
                             ),
                           ),
                           SizedBox(
