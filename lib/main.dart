@@ -1,8 +1,8 @@
 import 'package:al_minhaj/core/routes/app_routes.dart'
     as AppRoutes;
 import 'package:al_minhaj/core/services/shared_pref.dart';
-import 'package:al_minhaj/core/settings/cubit/settings_cubit.dart';
-import 'package:al_minhaj/core/settings/cubit/settings_state.dart';
+import 'package:al_minhaj/core/cubit/settings/cubit/settings_cubit.dart';
+import 'package:al_minhaj/core/cubit/settings/cubit/settings_state.dart';
 import 'package:al_minhaj/core/utils/theme/app_theme.dart';
 import 'package:al_minhaj/core/utils/theme/font_family_helper.dart';
 import 'package:al_minhaj/features/on_bording/views/on_bording_view.dart';

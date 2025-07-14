@@ -1,5 +1,5 @@
-import 'package:al_minhaj/core/settings/cubit/settings_cubit.dart';
-import 'package:al_minhaj/core/settings/cubit/settings_state.dart';
+import 'package:al_minhaj/core/cubit/settings/cubit/settings_cubit.dart';
+import 'package:al_minhaj/core/cubit/settings/cubit/settings_state.dart';
 import 'package:al_minhaj/features/home/presentation/widgets/home_app_bar.dart';
 import 'package:al_minhaj/core/widgets/sized_box.dart';
 import 'package:al_minhaj/features/drawer/pages/custom_drawer.dart';
@@ -34,7 +34,9 @@ class _HomeViewState extends State<HomeView> {
               children: [
                 PrayerTimeCard(),
                 TodayVarseCardSlidble(),
-                SizedBox(height: 2.heightPercent(context)),
+                SizedBox(
+                  height: 2.heightPercent(context),
+                ),
                 GridViewItem(),
               ],
             ),

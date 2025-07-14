@@ -1,4 +1,4 @@
-import 'package:al_minhaj/core/settings/cubit/settings_cubit.dart';
+import 'package:al_minhaj/core/cubit/settings/cubit/settings_cubit.dart';
 import 'package:al_minhaj/core/utils/theme/app_font_styles.dart';
 import 'package:al_minhaj/core/utils/theme/app_theme.dart';
 import 'package:al_minhaj/core/utils/theme/font_family_helper.dart';

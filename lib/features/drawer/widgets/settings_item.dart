@@ -1,4 +1,4 @@
-import 'package:al_minhaj/core/settings/cubit/settings_cubit.dart';
+import 'package:al_minhaj/core/cubit/settings/cubit/settings_cubit.dart';
 import 'package:al_minhaj/core/utils/theme/app_font_styles.dart';
 import 'package:al_minhaj/core/utils/theme/app_theme.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +14,8 @@ class SettingsItem extends StatefulWidget {
   final int index;
 
   @override
-  State<SettingsItem> createState() => _SettingsItemState();
+  State<SettingsItem> createState() =>
+      _SettingsItemState();
 }
 
 class _SettingsItemState extends State<SettingsItem> {
@@ -30,25 +31,27 @@ class _SettingsItemState extends State<SettingsItem> {
         style: AppFontStyles.styleRegular20(context),
       ),
       trailing:
-          widget.settingsList[widget.index]['hasSwitch']
+          widget.settingsList[widget
+              .index]['hasSwitch']
           ? Switch(
               value: AppTheme.isDark(context),
               onChanged: (value) {
                 if (value) {
-                  context.read<SettingsCubit>().changeTheme(
-                    ThemeMode.dark,
-                  );
+                  context
+                      .read<SettingsCubit>()
+                      .changeTheme(ThemeMode.dark);
                 } else {
-                  context.read<SettingsCubit>().changeTheme(
-                    ThemeMode.light,
-                  );
+                  context
+                      .read<SettingsCubit>()
+                      .changeTheme(ThemeMode.light);
                 }
                 setState(() {});
               },
               activeColor: Colors.green,
             )
           : null,
-      leading: widget.settingsList[widget.index]['icon'],
+      leading:
+          widget.settingsList[widget.index]['icon'],
     );
   }
 }
