@@ -46,8 +46,8 @@ class _PrayerTimeCardState
     return Container(
       height: 18.heightPercent(context),
       margin: EdgeInsets.symmetric(
-        horizontal: 20,
-        vertical: 16,
+        horizontal: 14,
+        vertical: 12,
       ),
       width: double.infinity,
       decoration: BoxDecoration(

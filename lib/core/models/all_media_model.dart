@@ -15,11 +15,9 @@ class AllMediaModel {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data =
         Map<String, dynamic>();
-    if (data != null) {
-      data['data'] = this.data!
-          .map((v) => v.toJson())
-          .toList();
-    }
+    data['data'] = this.data!
+        .map((v) => v.toJson())
+        .toList();
     return data;
   }
 }

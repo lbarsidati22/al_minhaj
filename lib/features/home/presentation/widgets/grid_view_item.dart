@@ -48,7 +48,7 @@ class GridViewItem extends StatelessWidget {
     ];
     return Padding(
       padding: EdgeInsetsGeometry.symmetric(
-        horizontal: 24,
+        horizontal: 12,
       ),
       child: GridView.builder(
         shrinkWrap: true,

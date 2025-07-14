@@ -1,3 +1,4 @@
+import 'package:al_minhaj/core/cubit/all_media_cubit.dart';
 import 'package:al_minhaj/core/routes/app_routes.dart'
     as AppRoutes;
 import 'package:al_minhaj/core/services/shared_pref.dart';
@@ -38,8 +39,17 @@ class AlMinhag extends StatelessWidget {
     // final GlobalKey<NavigatorState> navigatorKey =
     //     GlobalKey<NavigatorState>();
 
-    return BlocProvider(
-      create: (context) => QuranCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => QuranCubit(),
+        ),
+        BlocProvider(
+          create: (context) => AllMediaCubit()
+            ..getAudio()
+            ..getVideos(),
+        ),
+      ],
       child: BlocBuilder<SettingsCubit, SettingsState>(
         builder: (context, state) {
           if (state.language == 'ar') {
@@ -47,7 +57,7 @@ class AlMinhag extends StatelessWidget {
           } else {
             FontFamilyHelper.isArabic = false;
           }
-          print('${FontFamilyHelper.isArabic}');
+          print('//${FontFamilyHelper.isArabic}');
           print(
             "FONT: ${FontFamilyHelper.getFontFamily(state.language)}",
           );

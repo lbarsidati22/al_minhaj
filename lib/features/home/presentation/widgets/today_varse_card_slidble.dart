@@ -22,7 +22,7 @@ class _TodayVarseCardSlidbleState
       children: [
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: 24,
+            horizontal: 14,
           ),
           child: Row(
             mainAxisAlignment:

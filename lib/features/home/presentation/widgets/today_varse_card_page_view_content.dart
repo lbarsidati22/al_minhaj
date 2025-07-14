@@ -15,9 +15,7 @@ class TodayVarseCardPageViewContent
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(12),
-      margin: EdgeInsets.symmetric(
-        horizontal: 24,
-      ),
+      margin: EdgeInsets.symmetric(horizontal: 12),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: Theme.of(
@@ -33,8 +31,7 @@ class TodayVarseCardPageViewContent
       child: Column(
         mainAxisAlignment:
             MainAxisAlignment.spaceBetween,
-        crossAxisAlignment:
-            CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment:
@@ -49,8 +46,7 @@ class TodayVarseCardPageViewContent
                       AppFontStyles.styleBold16(
                         context,
                       ).copyWith(
-                        fontWeight:
-                            FontWeight.bold,
+                        fontWeight: FontWeight.bold,
                       ),
                 ),
               ),
@@ -71,12 +67,9 @@ class TodayVarseCardPageViewContent
               : index == 1
               ? Content2()
               : TodayVerseCardAudio(),
-          SizedBox(
-            height: 2.heightPercent(context),
-          ),
+          SizedBox(height: 2.heightPercent(context)),
           Row(
-            mainAxisAlignment:
-                MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
               Text(
                 'سورة الفاتحة - الجزء الثلاثون  - آية ١',
