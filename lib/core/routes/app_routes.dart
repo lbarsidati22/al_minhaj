@@ -1,4 +1,6 @@
 import 'package:al_minhaj/core/routes/base_routes.dart';
+import 'package:al_minhaj/features/ahadith/data/ahadith_model.dart';
+import 'package:al_minhaj/features/ahadith/presentation/widgets/ahadith_details.dart';
 import 'package:al_minhaj/features/al_mohadra/presentation/pages/al_mohadra_page.dart';
 import 'package:al_minhaj/features/all_ad3ye/presentation/views/al_ad3ya_screen.dart';
 import 'package:al_minhaj/features/azkar/presentation/views/azkar_screen.dart';
@@ -31,6 +33,14 @@ Route<dynamic> onGenerateRoute(
       return BaseRoute(page: TesbihScreen());
     case AlMohadraPage.routeName:
       return BaseRoute(page: AlMohadraPage());
+    case AhadithDetails.routeName:
+      var hadithModel =
+          settings.arguments as HadithModel;
+      return BaseRoute(
+        page: AhadithDetails(
+          hadithModel: hadithModel,
+        ),
+      );
     case SuraDetailsScreen.routeName:
       final int? suraNumber =
           settings.arguments as int?;

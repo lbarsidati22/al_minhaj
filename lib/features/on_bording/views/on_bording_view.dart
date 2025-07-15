@@ -17,21 +17,33 @@ class OnBordingView extends StatelessWidget {
             horizontal: 24,
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisAlignment:
+                MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
 
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 18,
+                  horizontal: 10,
                 ),
                 child: Image.asset(
                   'assets/images/basmala.png',
                 ),
               ),
 
-              Image.asset(
-                'assets/images/quran_book.png',
+              Row(
+                children: [
+                  Expanded(
+                    child: Image.asset(
+                      'assets/images/quran_book.png',
+                    ),
+                  ),
+                  Expanded(
+                    child: Image.asset(
+                      'assets/images/lectures.png',
+                    ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 1.heightPercent(context),
